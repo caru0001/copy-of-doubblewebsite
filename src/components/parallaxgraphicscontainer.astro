@@ -10,39 +10,7 @@ import flower from "../assets/images/flower.webp";
 <section class="max-w-7xl mx-auto py-12 md:py-16 px-4 md:px-16">
   <h2 class="font-montserrat text-heading2 font-extrabold tracking-tighter pb-4 text-firstkiss-500 max-w-2xl animationinviewfade">zero pressure. maximum fun.</h2>
   <p class="max-w-2xl pb-12 text-pillowtalk-500 animationinviewfade">with Doubble Events, dating feels like a night out with your friends — not awkward, not forced. just good times, good people, and your closest crew by your side.</p>
-  <Image src={discoball} alt="an ice cream cone" class="block md:hidden animate__animated animate__flash animate__slower animate__delay-1s animate__infinite" />
-  <article class="hidden md:block parallaxgraphic fullwidthsection">
-    <div class="h-screen w-full bg-cover bg-center grid grid-cols-12 overflow-clip">
-      <Image src={icecream} alt="an ice cream cone" class="col-start-2 col-span-3 parallax1" />
-      <Image src={discoball} alt="a disco ball" class="col-start-4 col-span-5 parallax2" />
-      <Image src={popcorn} alt="a bucket of popcorn" class="col-start-9 col-span-6 parallax3" />
-      <Image src={drink} alt="a drink" class="col-start-7 col-span-4 parallax4" />
-      <Image src={flower} alt="a bouquet of flowers" class="col-start-1 col-span-6 parallax5" />
-    </div>
-  </article>
+  <Image src={discoball} alt="an ice cream cone" class="animate__animated animate__flash animate__slower animate__delay-1s animate__infinite max-w-[350px]" />
 </section>
 
-<script>
-  import { animate, scroll } from "motion";
 
-  scroll(animate(".parallax1", { x: [100, -200], y: [400, -600] }), {
-    target: document.querySelector(".parallaxgraphic"),
-    offset: ["start end", "end start"],
-  });
-  scroll(animate(".parallax2", { x: [-100, 100], y: [800, -1800] }), {
-    target: document.querySelector(".parallaxgraphic"),
-    offset: ["start end", "end start"],
-  });
-  scroll(animate(".parallax3", { x: [-200, 300], y: [200, -900] }), {
-    target: document.querySelector(".parallaxgraphic"),
-    offset: ["start end", "end start"],
-  });
-  scroll(animate(".parallax4", { x: [100, -100], y: [100, -1800] }), {
-    target: document.querySelector(".parallaxgraphic"),
-    offset: ["start end", "end start"],
-  });
-  scroll(animate(".parallax5", { x: [50, -200], y: [-500, -1800] }), {
-    target: document.querySelector(".parallaxgraphic"),
-    offset: ["start end", "end start"],
-  });
-</script>
