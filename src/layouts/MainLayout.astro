@@ -1,0 +1,51 @@
+---
+import Navbar from "../components/navbar.astro";
+import Footer from "../components/myfooter.astro";
+import "../styles/tailwind.css";
+import "animate.css";
+const { title } = Astro.props;
+import { Image } from "astro:assets";
+import qr from "../assets/images/QR.svg";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{Astro.props.title}</title>
+  </head>
+  <body class="font-montserrat bg-afterhours-500">
+    <header>
+      <Navbar />
+    </header>
+
+    <main class="scroll-smooth text-pretty">
+      <slot />
+      <div class="fixed bottom-4 left-4 z-50 bg-pillowtalk-500 border border-afterhours-50 p-3 rounded-3xl drop-shadow-lg font-medium transition duration-300 hidden md:block">
+        <div class="flex gap-3 items-center"><Image src={qr} alt="pink doubble logo" class="w-auto h-12" /><p class="text-afterhours-500">scan to download</p></div>
+      </div>
+    </main>
+
+    <footer>
+      <Footer />
+    </footer>
+  </body>
+</html>
+
+<script>
+  import { animate, inView } from "motion";
+
+  // Entrance animation for whole website
+  animate("body", { opacity: [0, 1] }, { duration: 1 });
+
+  /* Animation for text fade in*/
+  inView(".animationinviewfade", (element) => {
+    animate(element, { opacity: [0, 1] }, { duration: 1.5 });
+
+    return () => {
+      animate(element, { opacity: [1, 0] }, { duration: 1.5 });
+    };
+  });
+</script>
