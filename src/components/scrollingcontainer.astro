@@ -9,7 +9,7 @@
 
 <script>
   /* Importing from Motion One library */
-  import { animate, inView, scroll } from "motion";
+  import { animate, inView } from "motion";
 
   /* Inview animation from right + return */
   inView(".textanimationright", (element) => {
@@ -27,11 +27,4 @@
     };
   });
 
-  // // Horisontal scroll
-  // scroll(
-  //   animate("#horisontalscrollitems", {
-  //     transform: ["none", "translateX(-50vw)"],
-  //   }),
-  //   { target: document.querySelector("#horisontalscrollsection") }
-  // );
 </script>
