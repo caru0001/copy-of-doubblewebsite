@@ -8,6 +8,7 @@
 
 @theme {
   /* Fonts */
+  --font-arial: "Arial", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
 
   /*Font sizes - clamp credit:@link https://utopia.fyi/clamp/calculator?a=320,1240,72—132&p=text*/
